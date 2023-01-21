@@ -1,0 +1,14 @@
+[phases.setup]
+cmds = ['...']
+
+[phases.install]
+dependsOn = ['setup']
+cmds = ['...']
+
+[phases.build]
+dependsOn = ['install']
+cmds = ['...']
+
+[start]
+dependsOn = ['build']
+cmd = 'yarn start'
