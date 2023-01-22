@@ -1,11 +1,27 @@
 .login {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
 }
 
 .login form {
   margin: 0 auto;
+}
+
+.login input {
+  width: 100%;
+}
+
+.login div {
+  width: 100%;
+  padding: 0;
+}
+
+.login span {
+  padding: 4px 8px;
+}
+
+.login button {
+  width: 100%;
 }
 
 .icon {

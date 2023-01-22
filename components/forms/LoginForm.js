@@ -10,11 +10,9 @@ import FormLayout, {
   FormMessage,
   FormRow,
 } from 'components/layout/FormLayout';
-import Icon from 'components/common/Icon';
 import useApi from 'hooks/useApi';
 import { AUTH_TOKEN } from 'lib/constants';
 import { setUser } from 'store/app';
-import Logo from 'assets/logo.svg';
 import styles from './LoginForm.module.css';
 
 const validate = ({ username, password }) => {
@@ -75,25 +73,15 @@ export default function LoginForm() {
       >
         {() => (
           <Form>
-            <div className={styles.header}>
-              <Icon icon={<Logo />} size="xlarge" className={styles.icon} />
-              <h1 className="center">umami</h1>
-            </div>
             <FormRow>
-              <label htmlFor="username">
-                <FormattedMessage id="label.username" defaultMessage="Username" />
-              </label>
               <div>
-                <Field name="username" type="text" />
+                <Field name="username" type="text" placeholder="Username" />
                 <FormError name="username" />
               </div>
             </FormRow>
             <FormRow>
-              <label htmlFor="password">
-                <FormattedMessage id="label.password" defaultMessage="Password" />
-              </label>
               <div>
-                <Field name="password" type="password" />
+                <Field name="password" type="password" placeholder="Password" />
                 <FormError name="password" />
               </div>
             </FormRow>
